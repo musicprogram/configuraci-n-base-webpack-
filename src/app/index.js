@@ -9,7 +9,7 @@ const formulario = ui.mostrarFormulario();
 
 const form = document.querySelector("#form"); 
 
-form.addEventListener('submit', (e)=>{
+form.addEventListener('submit', (e)=>{ // formulario para crear elementos
 	e.preventDefault(e);
 	const name = document.querySelector('#name').value;
 	const last_name = document.querySelector('#last_name').value;
@@ -21,3 +21,12 @@ form.addEventListener('submit', (e)=>{
 	ui.resetForm() //resetear los campos 
 })
 
+// boton de eliminar elementos
+const usuarioAgregado = document.querySelector("#usuarioAgregado"); 
+usuarioAgregado.addEventListener('click', (e)=>{
+	e.preventDefault(e);
+	ui.deleteUser(e.target);
+	console.log(e.target.name)
+
+})
+ 

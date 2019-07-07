@@ -30,6 +30,12 @@ class UI{
 	resetForm() {
     document.querySelector("#form").reset();
   }
+
+  deleteUser(element){
+  	if(element.name == 'delete'){ // se pregunta si su name es delete
+  		element.parentElement.remove(); // si cumple se elimina el padre de este elemento , el bloque de addUser
+  	}
+  }
 }
 
 module.exports = UI
