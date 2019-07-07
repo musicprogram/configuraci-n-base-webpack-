@@ -25,8 +25,11 @@ form.addEventListener('submit', (e)=>{ // formulario para crear elementos
 const usuarioAgregado = document.querySelector("#usuarioAgregado"); 
 usuarioAgregado.addEventListener('click', (e)=>{
 	e.preventDefault(e);
-	ui.deleteUser(e.target);
-	console.log(e.target.name)
+	if(e.target.name == 'delete'){ // se pregunta si su name es delete
+		ui.deleteUser(e.target);
+	}
+	
+	// console.log(e.target.name)
 
 })
  
